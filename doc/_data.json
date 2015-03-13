@@ -1,0 +1,209 @@
+{
+  "version":"0.4",
+  "pageContent":{
+    "comments":"Must use underscore for en-us.",
+    "navItems":{
+      "_common":{
+        "buttonBackToGallery":{
+          "text":"Back To Gallery"
+        },
+        "buttonStartTutorial":{
+          "text":"Start Tutorial"
+        }
+      }
+    }
+  },
+  "tutorial":{
+    "_common":{
+      "name":"Transforming vCard records into JSON messages by using the Graphical Data Mapping editor",
+      "shortDescription":"Learn how to transform a DFDL vCard model into a JSON message by using the Graphical Data Mapping editor.",
+      "durationText":"This tutorial takes approximately",
+      "durationTime":"1 hour",
+      "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+      "resourceToOpen":"MainFlow"
+    },
+    "pageDetails":{
+      "topicsName":"Tutorial Topics",
+      "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
+      "topicList":[	  
+        {
+          "title":"Using the Graphical Data Mapping editor"
+        }     
+      ],
+      "outcomesName":"Learning outcomes",
+      "_outcomesComment":"A description of what the user will have learned or accomplished by running this tutorial.",
+      "outcomeList":[
+        {
+          "title":"Use the Graphical Data Mapping editor capabilities in IBM Integration Bus to transform a message."
+        }
+      ],
+      "summary":{
+        "overviewName":"OVERVIEW",
+        "_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+        "sections":[
+          {
+		    "section":"This tutorial demonstrates how you can transform data from one format to another by using the Graphical Data Mapping editor. In this particular scenario, the Graphical Data Mapping editor is used to transform messages between the DFDL modelling language and the JSON data format."
+		  }
+        ]
+      }
+    },
+    "pageSteps":{
+      "concept":{
+        "overview":{
+          "name":"Overview",
+          "heading":"Overview",
+          "_overviewComment":"A short description of what this tutorial does, and what the user will do to run the tutorial.",
+          "sections":[
+            {
+              "section":"This tutorial demonstrates how you can transform data from one format to another by using the Graphical Data Mapping editor. In this particular scenario, the Graphical Data Mapping editor is used to transform messages between the DFDL modelling language and the JSON data format."
+            },
+			{
+              "section":"An IBM Integration Bus message map is used to transform data from an input file that contains vCard records into multiple JSON messages. The content of the data is also validated. Depending on the information included in each record, the corresponding JSON message produced might be a reject message or a valid message."
+            },
+            {
+              "section":"Whether you are an experienced IBM Integration Bus developer or just starting to use the product, you can use this tutorial to learn how to achieve the following tasks:"
+            },
+			{
+			  "section":"1. Dynamically model a JSON message by using the Add User-Defined function in the Graphical Data Mapping editor."
+			},
+            {
+              "section":"2. Define transforms between an input message and an output message."
+            },
+            {
+              "section":"3. Determine whether or not a transform is applied by using XPATH conditional expressions on a transform within a message map."
+            },
+            {
+              "section":"4. Validate input content and determine which type of output message to generate by using conditional expressions in a message map."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Developing integration solutions by using applications",
+              "link":"com.ibm.etools.mft.doc/bi12002_.htm"
+            },
+			{
+              "title":"Knowledge Center link to ",
+              "description":"Transforming messages by using the Graphical Data Mapping editor",
+              "link":"com.ibm.etools.mft.doc/br28800_.htm"
+            },
+			{
+              "title":"Knowledge Center link to ",
+              "description":"Message map",
+              "link":"com.ibm.etools.mft.doc/br28802_.htm"
+            },
+			{
+              "title":"Knowledge Center link to ",
+              "description":"Mapping Node",
+              "link":"com.ibm.etools.mft.doc/bc28600_.htm"
+            }
+          ]
+        }
+      },
+      "create":{
+        "overview":{
+          "name":"Create ",
+          "heading":"Import files",
+          "_createComment":"A description of what will happen when the user clicks Import.",
+          "sections":[
+            {
+              "section":"Click Import to add the solution to your IBM Integration Toolkit workspace."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Integration Development perspective",
+              "link":"com.ibm.etools.mft.doc/ab00040_.htm"
+            }
+          ]
+        },
+        "actionName":"Import"
+      },
+	  "prepare":{
+        "overview":{
+          "name":"Prepare",
+          "heading":"Prepare",
+          "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+          "sections":[
+            {
+              "section":"Click <b>Deploy</b> to deliver the solution from the development environment to the local test environment."
+            },
+            {
+              "section":"Create the input directory C:\\IIB\\BusinessCards in your file system. This directory matches the directory that is monitored by the FileInput node."
+            },
+            {
+              "section":"Create the output directory  C:\\IIB\\Cards in your file system. This directory matches the directory that is monitored by the FileOutput node."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Integration Nodes view",
+              "link":"com.ibm.etools.mft.doc/bb10600_.htm"
+            }
+          ]
+        },
+        "actionName":"Deploy"
+      },
+	    "run":{
+        "cleanupName":"Clean up",
+        "cleanupDescription":"Clean up and remove any changes made by the tutorial.",
+        "overview":{
+          "name":"Run",
+          "heading":"Test the solution",
+          "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+          "sections":[
+		     {
+              "section":"The HandlingVCards application is shown in the Application Development view of your workspace.",
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                    "details":"Open the Transform_vCards_into_JSON.msgflow, and click the Flow Exerciser icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/startFlowExerciser.png' alt='flow exerciser icon' /> to start recording the message path through the flow."
+                  },
+                  {
+				    "details":"To test the If path of the conditional expression, copy the message <b>vcard sample accept.txt</b> into the c:\\IIB\\BusinessCards directoryBusinessCards. The message is available in the GDM_Select_map_dynamically project, within the section <b>Other Resources</b>."
+				  },
+                  {
+				    "details":"To test the Esle path of the conditional expression, copy the message <b> vcard sample reject.txt</b> into the c:\\IIB\\BusinessCards directory. The message is available in the GDM_Select_map_dynamically project, within the section <b>Other Resources</b>."
+				  },
+                  {
+				    "details":"To test how to handle files that contain more than one vCard record, copy the message <b>vcard sample multi records.txt</b> into the c:\\IIB\\BusinessCards directory. The message is available in the GDM_Select_map_dynamically project, within the section <b>Other Resources</b>."
+				  }
+                ]
+              }
+            },
+			{
+              "section":"After each request message is processed, the message path is automatically highlighted on the message flow."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Testing your message flow by using the Flow exerciser",
+              "link":"com.ibm.etools.mft.doc/rt26110_.htm"
+            },
+			{
+              "title":"Knowledge Center link to ",
+              "description":"Developing integration solutions by using applications",
+              "link":"com.ibm.etools.mft.doc/bi12002_.htm"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
